@@ -4,6 +4,7 @@ env:
 script:
   - titanium info
 before_install:
+  - xcode-select -print-path
   - npm install --global titanium
   - mkdir -p $HOME/.titanium
   - cp auth_session.json $HOME/.titanium/auth_session.json
