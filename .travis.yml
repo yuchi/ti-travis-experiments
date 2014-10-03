@@ -2,12 +2,10 @@ language: objective-c
 env:
   - TI_SDK=3.4.0.GA IOS_VERSION=8.0
 script:
-  - titanium info
+  - cd app
+  - titanium --no-progress-bars --no-prompt --no-banner build --build-only --platform ios --ios-version $IOS_VERSION
 before_install:
-  - xcode-select -print-path
   - npm install --global titanium
   - mkdir -p $HOME/.titanium
   - cp auth_session.json $HOME/.titanium/auth_session.json
-  - titanium sdk install "$TI_SDK"
-  - cd app
-  - titanium build --build-only --platform ios --ios-version $IOS_VERSION
+  - titanium --no-progress-bars --no-prompt --no-banner sdk install "$TI_SDK"
