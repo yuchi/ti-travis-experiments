@@ -1,6 +1,8 @@
 language: objective-c
+env:
+  - TI_SDK=3.3.0.GA
 script:
   - titanium info
 before_install:
   - npm install --global titanium
-  - titanium sdk install 3.3.0.GA
+  - titanium sdk install "$TI_SDK"
