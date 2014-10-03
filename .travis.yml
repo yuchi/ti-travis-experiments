@@ -1,6 +1,6 @@
 language: objective-c
 env:
-  - TI_SDK=3.4.0.GA IOS_VERSION=7.1
+  - TI_SDK=3.4.0.GA IOS_VERSION=8.0
 script:
   - titanium info
 before_install:
