@@ -1,0 +1,7 @@
+script:
+  - titanium info
+before_install:
+  - brew update
+  - brew install node
+  - npm install --global titanium
+  - titanium sdk install 3.3.0.GA
