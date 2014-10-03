@@ -1,6 +1,6 @@
 language: objective-c
 env:
-  - TI_SDK=3.3.0.GA
+  - TI_SDK=3.3.0.GA IOS_VERSION=7.1
 script:
   - titanium info
 before_install:
@@ -9,3 +9,5 @@ before_install:
   - mkdir -p $HOME/.titanium
   - cp auth_session.json $HOME/.titanium/auth_session.json
   - titanium sdk install "$TI_SDK"
+  - cd app
+  - titanium build --build-only --platform ios --ios-version $IOS_VERSION
