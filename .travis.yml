@@ -3,7 +3,7 @@ env:
   - TI_SDK=3.4.0.GA IOS_VERSION=8.0
 script:
   - cd app
-  - titanium build $TI_OPTS --build-only --platform ios --ios-version $IOS_VERSION
+  - titanium build $TI_OPTS --platform ios --ios-version $IOS_VERSION
 before_install:
   - export TI_OPTS="--no-progress-bars --no-prompt --no-banner --log-level info"
   - npm install --global titanium
